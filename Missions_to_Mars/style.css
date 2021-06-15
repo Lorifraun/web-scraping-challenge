@@ -7,16 +7,16 @@
 	}
 	
 
-	.skyblue {
-	  background: deepskyblue;
+	.blue {
+	  background: rgb(0, 47, 255);
 	}
 	
 
-	.purple {
-	  background: rebeccapurple;
+	.orange {
+	  background: rgb(153, 54, 51);
 	}
 	
 
 	.red {
-	  background: indianred;
+	  background: rgb(158, 31, 69);
 	}
