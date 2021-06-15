@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel= "stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center">
+      <h1 class="jumbotron">Mission to Mars</h1>
+      <a href="/scrape">
+        scrape
+      </a>
+      <div>
+          <h2>
+              {{mars.news_title}}
+          </h2>
+          <p>
+            {{mars.news_p}}
+          </p>
+          <img src="{{mars.featured_image}}">
+        <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
+          {% for item in mars.hemisphere %}
+          <div class="col-lg-4">
+              <div class="card" style="width: 20rem;">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ item.title }}</h4>
+                    <img src="{{item.url}}" >
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+            {{mars.mars_facts | safe}}
+
+
+      </div>
+    </div>
+  </body>
+</html>
